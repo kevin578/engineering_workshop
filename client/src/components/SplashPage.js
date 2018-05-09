@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import ewLogo from './../ewLogo.png'
-import GoogleButton from './GoogleButton'
+import OauthButton from './OauthButton'
+import GoogleLogo from './../googleLogo.png'
+import EmailLogo from './../email.png';
 
 const Wrapper = styled.section`
     height: 600px;
@@ -15,6 +17,13 @@ const Title = styled.img`
     width: 400px;
 `
 
+const Buttons = styled.div`
+    display: flex;  
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+`
+
 
 
 class SplashBody extends React.Component {
@@ -22,7 +31,10 @@ class SplashBody extends React.Component {
         return (
             <Wrapper>
                 <Title src = {ewLogo} />
-                <GoogleButton />
+                <Buttons>
+                    <OauthButton logo = {GoogleLogo} text = "Continue with Google"/>
+                    <OauthButton logo = {EmailLogo} text = "Sign up with email"/>
+                </Buttons>
             </Wrapper>
         )
     }

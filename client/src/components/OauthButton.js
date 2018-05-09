@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import GoogleLogo from './../googleLogo.png'
 
 
-const Button = styled.button`
+
+const ButtonBody = styled.button`
   font-family: 'Roboto', sans-serif;
   width: 200px;
   height: 50px;
@@ -40,14 +40,14 @@ const Text = styled.p`
 
 
 
-const GoogleButton = ()=> {
+const OauthButton = (props)=> {
     return (
-        <Button>
-                <Logo src = {GoogleLogo} />
-                <Text>Continue wth Google</Text>
-        </Button>
+        <ButtonBody>
+                <Logo src = {props.logo} />
+                <Text>{props.text}</Text>
+        </ButtonBody>
     )
 }
 
-export default GoogleButton;
+export default OauthButton;
 
